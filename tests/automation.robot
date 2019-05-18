@@ -11,6 +11,7 @@ Test Teardown    Teardown
 do stuff
     input text to search field
     execute search
+    navigate to second results page
 
 *** Keywords ***
 Initialize
