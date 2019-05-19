@@ -1,8 +1,8 @@
 # Test automation script for Mash
 
-This repository contains test suite for 
+This repository contains test framework based on Python, Robot Framework and Selenium
 
-## Used technologies
+## Tools used
 
 - PyCharm 2018.2
 - Python 3.7
@@ -10,11 +10,6 @@ This repository contains test suite for
 - robotframework-seleniumlibrary	3.3.1
 - selenium	3.141.0
 
-## Preconditions
-Path with project added to PYTHONPATH
-~~~
-{project_path}/mash_automation/libraries
-~~~
 
 ## First time setup of virtualenv
 ~~~~
@@ -23,7 +18,7 @@ Path with project added to PYTHONPATH
 
 ## Setting up the environment
 
-After cloning this repo to a host machine, a new virtual environment can be created by calling
+After cloning this repo to a host machine, navigate to project directory and create new virtual environment by calling
 
 ~~~~
  $ virtualenv .venv
@@ -33,14 +28,12 @@ After cloning this repo to a host machine, a new virtual environment can be crea
  $ source .venv/bin/activate
 ~~~~
 
-This will then create the virtual environment and return a prompt that has (.venv) at the start. To ensure the right configuration is applied then run the following steps
+Then install required packageds (robot framework and selenium)
 
 ~~~~
  (.venv) $ pip install --upgrade pip # many distributions ship criminal old pip
  (.venv) $ pip install -r requirements.txt
 ~~~~
-
-Above will install required packages (robotframework and selenium)
 
 ## Leaving the virtual environment
 
@@ -50,9 +43,17 @@ Leaving the virtual environment can be done from the terminal by the following c
  (.venv) $ deactivate
 ~~~~
 
+## Browser drivers
+
+Path to browser drivers should be added to PATH in environment variables settings
+
 ##  Running test
 
 In command line/terminal navigate to project directory and execute below command to run test:
 ~~~~
  robot -d results tests/web_automation.robot
 ~~~~
+
+## Browsing test execution results
+
+Test results are stored in `results` folder within project
