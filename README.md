@@ -14,14 +14,21 @@ This repository contains test framework based on Python, Robot Framework and Sel
 Follow below instructions to setup virtual environment and run test.
 
 ## First time setup of virtualenv
+
+for Mac/Linux
 ~~~~
  $ sudo apt-get install python-virtualenv
+~~~~
+for Windows
+~~~~
+ pip3 install virtualenv
 ~~~~
 
 ## Setting up the environment
 
 After cloning this repo to a host machine, navigate to project directory and create new virtual environment by calling
 
+For Mac/Linux
 ~~~~
  $ virtualenv .venv
  or if you want to specify python3 as your project interpreter
@@ -29,6 +36,12 @@ After cloning this repo to a host machine, navigate to project directory and cre
  then 
  $ source .venv/bin/activate
 ~~~~
+
+For Windows
+~~~~
+ cd .venv/Scripts
+ activate.bat
+ ~~~~
 
 Then install required packageds (robot framework and selenium)
 
@@ -41,13 +54,20 @@ Then install required packageds (robot framework and selenium)
 
 Leaving the virtual environment can be done from the terminal by the following call
 
+For Mac/Linux
 ~~~~
  (.venv) $ deactivate
 ~~~~
 
-## Browser drivers
+For Windows
+~~~~
+deactivate.bat
+~~~~
 
-Path to browser drivers should be added to PATH in environment variables settings
+## PATH & PYTHONPATH
+
+- Path to project should be added to PYTHONPATH.
+- Path to browser drivers (chromedriver, geckodriver) should be added to PATH in environment variables settings. Or just copy browser drivers to project directory
 
 ## Executing test
 
