@@ -1,5 +1,5 @@
 from libraries.Base import Base
-# from libraries.CommonKeywords import CommonKeywords
+from libraries.TestSetup import TestSetup
 from libraries.PageObjects.locators import *
 from selenium.webdriver import ActionChains
 
@@ -7,8 +7,8 @@ from selenium.webdriver import ActionChains
 class WebKeywords(Base):
     def __init__(self):
         super(WebKeywords, self).__init__()
-        # self.common_kw = CommonKeywords()
-
+        self.common_kw = TestSetup()
+        
     def input_text_to_search_field(self, search_input):
         """
         Pass string from parameter into search input field
@@ -77,15 +77,8 @@ class WebKeywords(Base):
         except:
             raise AssertionError("Link to Mash site is displayed at second page of search results, but should not!")
 
-    def initialize_and_open_browser_with_url(self, url, browser):
-
-        self.selenium_lib.open_browser(url, browser=browser)
-        self.selenium_lib.maximize_browser_window()
-
-    def close_browser(self):
-        self.selenium_lib.driver.close()
-
     def scroll_to_bottom_of_current_page(self):
-        """"""
+        """Scrolling to bottom of current page"""
+
         scroll = self.selenium_lib.driver.execute_script('window.scrollTo(0, document.body.scrollHeight);')
         return scroll

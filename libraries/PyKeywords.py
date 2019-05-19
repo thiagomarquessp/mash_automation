@@ -1,9 +1,9 @@
-# from libraries.CommonKeywords import CommonKeywords
+from libraries.TestSetup import TestSetup
 from libraries.WebKeywords import WebKeywords
 
 
 class PyKeywords(
-    # CommonKeywords,
+    TestSetup,
     WebKeywords
 ):
 
