@@ -1,5 +1,5 @@
 from libraries.Base import Base
-from libraries.CommonKeywords import CommonKeywords
+# from libraries.CommonKeywords import CommonKeywords
 from libraries.PageObjects.locators import *
 from selenium.webdriver import ActionChains
 
@@ -7,7 +7,7 @@ from selenium.webdriver import ActionChains
 class WebKeywords(Base):
     def __init__(self):
         super(WebKeywords, self).__init__()
-        self.common_kw = CommonKeywords()
+        # self.common_kw = CommonKeywords()
 
     def input_text_to_search_field(self, search_input):
         """
@@ -52,7 +52,7 @@ class WebKeywords(Base):
 
         valid = True
 
-        self.common_kw.scroll_to_bottom_of_current_page()
+        self.scroll_to_bottom_of_current_page()
 
         try:
             self.selenium_lib.click_element(SEARCH_RESULT_PAGE_GO_TO_SECOND_PAGE_BUTTON)
@@ -76,3 +76,16 @@ class WebKeywords(Base):
             self.selenium_lib.element_should_not_be_visible(SEARCH_RESULT_MASH_LINK)
         except:
             raise AssertionError("Link to Mash site is displayed at second page of search results, but should not!")
+
+    def initialize_and_open_browser_with_url(self, url, browser):
+
+        self.selenium_lib.open_browser(url, browser=browser)
+        self.selenium_lib.maximize_browser_window()
+
+    def close_browser(self):
+        self.selenium_lib.driver.close()
+
+    def scroll_to_bottom_of_current_page(self):
+        """"""
+        scroll = self.selenium_lib.driver.execute_script('window.scrollTo(0, document.body.scrollHeight);')
+        return scroll
