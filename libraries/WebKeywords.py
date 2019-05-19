@@ -13,13 +13,12 @@ class WebKeywords(Base):
         """
         Pass string from parameter into search input field
         :param search_input:
-        :return:
         """
 
         try:
             self.selenium_lib.input_text(MAIN_PAGE_SEARCH_INPUT_FIELD, search_input)
         except:
-            raise AssertionError(f"Could not input {search_input} text into search")
+            raise AssertionError(f"Could not input string: {search_input} text into search field.")
 
     def execute_search(self):
         """Execute search by pressing Enter key

@@ -8,7 +8,7 @@ Suite Teardown    Teardown
 
 
 *** Test Cases ***
-Finnish Mash site link is not displayed on second page of Google search results
+Mash site link should not be displayed on second page of Google search result
     Input text to search field    ${SEARCH_INPUT}
     Execute search
     Navigate to second results page
