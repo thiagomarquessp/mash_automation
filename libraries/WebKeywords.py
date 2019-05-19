@@ -1,13 +1,9 @@
 from libraries.Base import Base
-from libraries.TestSetup import TestSetup
 from libraries.PageObjects.locators import *
 from selenium.webdriver import ActionChains
 
 
 class WebKeywords(Base):
-    def __init__(self):
-        super(WebKeywords, self).__init__()
-        self.common_kw = TestSetup()
         
     def input_text_to_search_field(self, search_input):
         """
