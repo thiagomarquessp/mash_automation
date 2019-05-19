@@ -66,8 +66,8 @@ deactivate.bat
 
 ## PATH & PYTHONPATH
 
-Path to project should be added to PYTHONPATH
-Path to browser drivers (chromedriver, geckodriver) should be added to PATH in environment variables settings. Or just copy browser drivers to project directory
+- Path to project should be added to PYTHONPATH.
+- Path to browser drivers (chromedriver, geckodriver) should be added to PATH in environment variables settings. Or just copy browser drivers to project directory
 
 ## Executing test
 
