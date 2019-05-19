@@ -2,16 +2,19 @@
 
 This repository contains test suite for 
 
-## Preconditions
+## Used technologies
 
-1) Installed packages:
+- PyCharm 2018.2
 - Python 3.7
 - robotframework	3.1.1
 - robotframework-seleniumlibrary	3.3.1
 - selenium	3.141.0
 
-2) Correct path added to PYTHONPATH
-- {project_path}/mash_automation/libraries
+## Preconditions
+Path with project added to PYTHONPATH
+~~~
+{project_path}/mash_automation/libraries
+~~~
 
 ## First time setup of virtualenv
 ~~~~
@@ -34,9 +37,10 @@ This will then create the virtual environment and return a prompt that has (.ven
 
 ~~~~
  (.venv) $ pip install --upgrade pip # many distributions ship criminal old pip
- (.venv) $ pip install -r pip_requirements.txt
+ (.venv) $ pip install -r requirements.txt
 ~~~~
 
+Above will install required packages (robotframework and selenium)
 
 ## Leaving the virtual environment
 
@@ -46,4 +50,9 @@ Leaving the virtual environment can be done from the terminal by the following c
  (.venv) $ deactivate
 ~~~~
 
+##  Running test
 
+In command line/terminal navigate to project directory and execute below command to run test:
+~~~~
+ robot -d results tests/web_automation.robot
+~~~~
