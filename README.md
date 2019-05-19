@@ -10,6 +10,7 @@ This repository contains test framework based on Python, Robot Framework and Sel
 - robotframework-seleniumlibrary	3.3.1
 - selenium	3.141.0
 
+# Steps how to run:
 
 ## First time setup of virtualenv
 ~~~~
