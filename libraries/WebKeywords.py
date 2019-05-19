@@ -16,7 +16,7 @@ class WebKeywords(Base):
         except:
             raise AssertionError(f"Could not input string: {search_input} text into search field.")
 
-    def execute_search(self):
+    def execute_search(self, search_result):
         """Execute search by pressing Enter key
         and verifying if given link is displayed at first search result page
         """
@@ -32,7 +32,7 @@ class WebKeywords(Base):
             valid = False
 
         try:
-            self.selenium_lib.wait_until_element_is_visible(SEARCH_RESULT_MASH_LINK)
+            self.selenium_lib.wait_until_element_is_visible(search_result)
             self.builtin_lib.log("Mash link is displayed in front page")
         except:
             self.builtin_lib.log("Mash link is not displayed in front page.", "ERROR")

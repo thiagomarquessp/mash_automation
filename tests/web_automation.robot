@@ -10,7 +10,7 @@ Suite Teardown    Teardown
 *** Test Cases ***
 Mash site link should not be displayed on second page of Google search result
     Input text to search field    ${SEARCH_INPUT}
-    Execute search
+    Execute search    ${SEARCH_RESULT_MASH_LINK}
     Navigate to second results page
     Verify if link to Mash site is not visible
 
