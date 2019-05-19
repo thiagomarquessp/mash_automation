@@ -10,7 +10,8 @@ This repository contains test framework based on Python, Robot Framework and Sel
 - robotframework-seleniumlibrary	3.3.1
 - selenium	3.141.0
 
-# Steps how to run:
+# Steps how to run test
+Follow below instructions to setup virtual environment and run test.
 
 ## First time setup of virtualenv
 ~~~~
@@ -48,7 +49,7 @@ Leaving the virtual environment can be done from the terminal by the following c
 
 Path to browser drivers should be added to PATH in environment variables settings
 
-##  Running test
+## Executing test
 
 In command line/terminal navigate to project directory and execute below command to run test:
 ~~~~
